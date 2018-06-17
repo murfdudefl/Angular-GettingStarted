@@ -5,5 +5,7 @@
 		"**/.DS_Store": true,
         "**/*.js": true,
         "**/*.map": true
-	}
+	},
+	"favorites.sortDirection": "ASC",
+	"favorites.groupsFirst": true
 }
