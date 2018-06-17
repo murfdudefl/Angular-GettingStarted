@@ -1,0 +1,46 @@
+<div class="panel panel-primary">
+  <div class='panel-heading'>
+    {{ pageTitle }}
+  </div>
+  <div class='panel-primary'>
+    <div class="row">
+      <div class="col-sm-8">
+        <img [src]="[product.imageUrl]" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 bold">ID:</div>
+      <div class="col-sm-6">{{ product.productId }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 bold">Name:</div>
+      <div class="col-sm-6">{{ product.productName }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 bold">Description:</div>
+      <div class="col-sm-6">{{ product.description }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 bold">Code:</div>
+      <div class="col-sm-6">{{ product.productCode | uppercase | convertToSpaces:'-' }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 bold">Release Date:</div>
+      <div class="col-sm-6">{{ product.releaseDate }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 bold">Price:</div>
+      <div class="col-sm-6">{{ product.price | currency:'USD':true:'1.2-2' }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 bold">Rating:</div>
+      <div class="col-sm-6">
+        <pm-star [rating]="product.starRating"></pm-star>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-footer">
+    <button class="btn btn-primary" (click)="onBack()">
+      <i class="glyphicon glyphicon-chevron-left"></i> Products</button>
+  </div>
+</div>
