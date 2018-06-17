@@ -6,3 +6,9 @@
 .bold {
     font-weight: bold;
 }
+.imageContainer {
+    float: 'left';
+}
+.productImage {
+    width: 100%;
+}
